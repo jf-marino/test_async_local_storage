@@ -1,0 +1,20 @@
+{
+  "name": "test-async-local-storage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:working:third-party": "node working_with_third_party_library.js",
+    "start:working:no-async": "node working_without_async_await.js",
+    "start:not-working": "node not_working.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-local-storage": "^2.3.1",
+    "express": "^4.17.1",
+    "knex": "^0.21.5",
+    "pg": "^8.3.2"
+  }
+}
