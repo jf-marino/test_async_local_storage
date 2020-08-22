@@ -11,27 +11,28 @@ The repo contains 3 use cases:
 ### Requirements
 
 - Node v12.17 or above (older versions do not include `AsyncLocalStorage` or have it as an experimental feature).
+- The examples expect a database `hiq_crm` with a table `lead`. Make sure you modify the credentials being used.
 
-#### What the examples do
+### What the examples do
 
 All 3 examples do the exact same thing. They setup a simple Express web server in port 3000 that exposes a single
 route `/` that, when accessed, reads all leads in the `lead` table of a `hiq_crm` database. All examples use Knex
 to query the database.
 
-#### What it intends to show
+### What it intends to show
 
 The idea behind this bit of code is to show how the different implementations of CLS react to this use case (which is
 pretty much what we're aiming to achieve ourselves), which is, how to maintain CLS context inside Knex's `query-response`
 event listener, so that we may access the current logged in user.
 
-#### Running the examples
+### Running the examples
 
 Each example has its own npm script defined:
 - `start:working:no-async` - Using `AsyncLocalStorage` **without async/await**
 - `"start:not-working` - Using `AsyncLocalStorage` **with async/await**
 - `start:working:third-party` - Using `async-local-storage` **with async/await**
 
-#### What to expect from the results
+### What to expect from the results
 
 If you run all three examples shown above, you should see the following results (could be in a different order of course):
 
